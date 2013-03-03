@@ -20,16 +20,8 @@ test("Marks a Todo as complete", function() {
 	S('#todo-count').html(/<strong>0<\/strong>(.*)item(.*)left/, 'Todo count text is correct')
 });
 
-test("Adding another Todo, filtering", function() {
+test("Adding another Todo", function() {
 	S('#new-todo').click().type('Finish website\r').wait(500);
 	S('#todo-list li').size(2, 'Now two Todos in list');
 	S('#todo-count').html(/<strong>1<\/strong>(.*)item(.*)left/, 'Todo count text is correct');
 });
-
-//test("Deleting a Todo", function() {
-//
-//});
-//
-//test("Complete and clear all", function() {
-//
-//});
