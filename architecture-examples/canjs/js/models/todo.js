@@ -3,8 +3,8 @@
 	'use strict';
 
 	// Basic Todo entry model
-	var Todo = can.Model.LocalStorage.extend({
-		storageName: 'todos-canjs'
+	var Todo = can.Feathers.Model.extend({
+		service: 'todos'
 	}, {
 		init: function () {
 			// Autosave when changing the text or completing the todo
